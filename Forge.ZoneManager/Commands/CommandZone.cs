@@ -79,7 +79,7 @@ namespace Forge.ZoneManager.Commands
         {
             if (command.Length < 2)
             {
-                UnturnedChat.Say(player, "Usage: /zone add <zone|node|flag|block|group|parameter|heightnode> [arguments]");
+                UnturnedChat.Say(player, "Usage: /zone add <zone|node|flag|block|parameter|heightnode> [arguments]");
                 return;
             }
             switch (command[1].ToLower())
@@ -95,9 +95,6 @@ namespace Forge.ZoneManager.Commands
                     break;
                 case "block":
                     HandleAddBlockCommand(player, command);
-                    break;
-                case "group":
-                    HandleAddGroupCommand(player, command);
                     break;
                 case "parameter":
                     HandleAddParameterCommand(player, command);
@@ -115,7 +112,7 @@ namespace Forge.ZoneManager.Commands
         {
             if (command.Length < 2)
             {
-                UnturnedChat.Say(player, "Usage: /zone remove <zone|node|flag|block|group|parameter|heightnode> [arguments]");
+                UnturnedChat.Say(player, "Usage: /zone remove <zone|node|flag|block|parameter|heightnode> [arguments]");
                 return;
             }
             switch (command[1].ToLower())
@@ -131,9 +128,6 @@ namespace Forge.ZoneManager.Commands
                     break;
                 case "block":
                     HandleRemoveBlockCommand(player, command);
-                    break;
-                case "group":
-                    HandleRemoveGroupCommand(player, command);
                     break;
                 case "parameter":
                     HandleRemoveParameterCommand(player, command);
